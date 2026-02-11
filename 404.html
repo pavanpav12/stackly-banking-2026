@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 | Page Not Found</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:#fff;
+}
+
+.error-container{
+  max-width:1000px;
+  width:90%;
+  display:flex;
+  align-items:center;
+  gap:40px;
+  animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* IMAGE */
+.error-img img{
+  width:420px;
+  animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-15px)}
+}
+
+/* TEXT */
+.error-text h1{
+  font-size:120px;
+  line-height:1;
+}
+
+.error-text h2{
+  font-size:32px;
+  margin:10px 0;
+}
+
+.error-text p{
+  font-size:16px;
+  color:#e2e8f0;
+  margin-bottom:25px;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  padding:14px 32px;
+  background:linear-gradient(135deg,#00eaff,#00c6ff);
+  color:#111;
+  font-weight:600;
+  border-radius:30px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .error-container{
+    flex-direction:column;
+    text-align:center;
+  }
+  .error-img img{
+    width:300px;
+  }
+  .error-text h1{
+    font-size:90px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="error-container">
+
+  <!-- IMAGE -->
+  <div class="error-img">
+    <!-- HD Illustration -->
+    <img src="https://illustrations.popsy.co/gray/falling.svg" alt="404 image">
+  </div>
+
+  <!-- CONTENT -->
+  <div class="error-text">
+    <h1>404</h1>
+    <h2>Oops! Page Not Found</h2>
+    <p>
+      The page you’re looking for doesn’t exist or has been moved.
+      Let’s get you back on track.
+    </p>
+
+    <a href="index.html" class="btn">Back to Home</a>
+  </div>
+
+</div>
+
+</body>
+</html>
